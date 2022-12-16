@@ -1,0 +1,112 @@
+<div class="template">
+    
+    <div class="container">
+        <div class="something-special">
+            <div class="outer">
+            <div class="d-flex align-items-center" id="inner">
+            </div>
+            <div id="inner-1">
+                <button id="add-button" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-add-expense">Add</button>
+            </div>
+            <div id="inner-2"></div>
+            </div>
+            <table class="table align-middle table-hover table-striped">
+            <thead class="bg-primary text-white">
+                <tr>
+                <th scope="col" class="col">Title</th>
+                <th scope="col" class="col">Category</th>
+                <th scope="col" class="col" >Amount</th>
+                <th scope="col" class="col">Invoice start</th>
+                <th scope="col" class="col" id="th-email">Invoice deadline</th>
+                <th scope="col" class="col" id="th-edit"></th>
+         
+                </tr>
+            </thead>
+            <tbody id="tbl-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-add-expense" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h3 class="modal-title w-100">New expense</h3>
+            </div>
+            <div class="modal-body">
+              <!-- <form id="inputs" class="needs-validation" novalidate=""> -->
+                <div class="form">
+                  <div class="form-group mx-2 mb-3">
+                    <label for="description">Title</label>
+                    <input type="text" class="form-control" id="add-description" placeholder="description" required="">
+                  </div>
+                  <div class="form-group mx-2 mb-3">
+                    <label for="category">Category</label>
+                    <input type="text" class="form-control" id="add-category" placeholder="category" required="">
+                  </div>
+                  <div class="form-group mx-2 mb-3">
+                    <label for="amount">Amount</label>
+                    <input type="text" class="form-control" id="add-amount"  placeholder="amount" value="" required="">
+                  </div>
+                  <div class="form-group mx-2 mb-3">
+                    <label for="email">Date of recival</label>
+                    <input type="date" class="form-control" id="add-start" required="">
+                  </div>
+                   <div class="form-group mx-2 mb-3">
+                    <label for="email">Deadline</label>
+                    <input type="date" class="form-control" id="add-end" required="">
+                  </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+              <button id="bnt-submit-expense" type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Add expense</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="modal-edit-expense" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h3 class="modal-title w-100" id="contact-title">Edit contact</h3>
+            </div>
+            <div class="modal-body">
+              <!-- <form id="inputs" class="needs-validation" novalidate=""> -->
+                <div class="form">
+                    <input id="id-edit-expense" type="hidden" />
+                    <div class="form-group mx-2 mb-3">
+                      <label for="description">Title</label>
+                      <input type="text" class="form-control" id="edit-description" placeholder="description" required="">
+                    </div>
+                    <div class="form-group mx-2 mb-3">
+                      <label for="category">Category</label>
+                      <input type="text" class="form-control" id="edit-category" placeholder="category" required="">
+                    </div>
+                    <div class="form-group mx-2 mb-3">
+                      <label for="amount">Amount</label>
+                      <input type="text" class="form-control" id="edit-amount"  placeholder="category" value="" required="">
+                    </div>
+                    <div class="form-group mx-2 mb-3">
+                      <label for="email">Date of recival</label>
+                      <input type="date" class="form-control" id="edit-start" required="">
+                    </div>
+                     <div class="form-group mx-2 mb-3">
+                      <label for="email">Deadline</label>
+                      <input type="date" class="form-control" id="edit-end" required="">
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer text-center">
+              <button id="bnt-delete-expense" type="button" class="btn btn-secondary w-80" data-bs-dismiss="modal">Delete</button>
+              <button id="bnt-edit-expense" type="button" class="btn btn-primary w-80" data-bs-dismiss="modal">Edit Expense</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</div>
